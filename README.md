@@ -21,8 +21,8 @@ Or you can build an object with a bytes array, it's always useful if you want to
 than .NET `FileStream`. 
 ```C#
 var bytes = new byte[ 1024 ];
-ReadBytes(bytes);
-using( var archive = new TinyZip(bytes) )
+ReadBytes( bytes );
+using( var archive = new TinyZip( bytes ) )
 {
     ...
 }
@@ -69,7 +69,7 @@ To use nested archives you need to get data and send it to the bytes constructor
 using ( var archive = new TinyZip( data ) )
 {
     var fileNames = archive.FileNames;
-    foreach (var fileName in fileNames)
+    foreach ( var fileName in fileNames )
     {
         if( fileName.EndsWith( ".zip" ) )
         {
